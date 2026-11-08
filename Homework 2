@@ -1,0 +1,57 @@
+print:"Hello World"
+
+# Task 1 - Indexing and Slicing
+
+word = "programming"
+
+print(word[0])
+print(word[-1])
+print(word[-3])
+print(word[:4])
+print(word[-4:])
+print(word[::2])
+print(word[::-1])
+
+# Task 2 - Email Parsing
+
+email = input("Enter your email: ")
+
+at_position = email.index("@")
+
+username = email[:at_position]
+domain = email[at_position + 1:]
+domain_name = domain[:domain.index(".")]
+
+print("Username:", username)
+print("Domain:", domain)
+print("Domain name:", domain_name)
+
+# Task 3 - Phone Number Cleaning
+
+phone = input("Enter your phone number: ")
+
+phone = phone.replace(" ", "")
+phone = phone.replace("-", "")
+
+print("Clean phone number:", phone)
+
+# Task 4 - URL Slug Generator
+
+title = input("Enter a title: ")
+title = title.lower()
+words = title.split()
+slug = "-".join(words)
+
+print("Slug:", slug)
+
+# Task 5 - Student Card
+
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+city = input("Enter your city: ")
+language = input("Favorite programming language: ")
+
+print(f"Name: {name.title()}")
+print(f"Age: {age}")
+print(f"City: {city.title()}")
+print(f"Favorite language: {language.upper()}")
